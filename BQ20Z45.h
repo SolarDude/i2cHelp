@@ -24,6 +24,7 @@ uint8_t BQ20Z45::read(uint8_t address)
 	Wire.endTransmission();
         return registerValue;
 }
+
 uint16_t BQ20Z45::read16u(uint8_t address)
 {
 	uint16_t registerValue;
@@ -312,4 +313,5 @@ uint16_t BQ20Z45::ChargingStatus()
 	return read16u(BQ20Z45_ChargingStatus);
 }
 
-int BQ20Z45::readString(uint8_t address, char* result)
+
+int BQ20Z45::readString(uint8_t address, char* result) /// This isn't all thats needed here right? I don't know what should go below. HELP!
